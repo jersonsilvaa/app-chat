@@ -1,6 +1,8 @@
 import React from 'react'
+import useShowAndHide from '../hooks/useShowAndHide'
 
 const Register = () => {
+    const { show, toggleBtn, FaEye, FaEyeSlash } = useShowAndHide()
     return (
         <div className="container">
             <section className="form signup">
@@ -25,8 +27,12 @@ const Register = () => {
 
                         <div className="field input">
                             <label>Contraseña</label>
-                            <input type="password" placeholder="Contraseña" />
-                            <i className="fas fa-eye"></i>
+                            <input type={show ? "text" : "password"} placeholder="Contraseña" />
+                            <i onClick={toggleBtn} className="fas fa-eye">
+                                {
+                                    show ? <FaEyeSlash /> : <FaEye />
+                                }
+                            </i>
                         </div>
 
                         <div className="field image">
