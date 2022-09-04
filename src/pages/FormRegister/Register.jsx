@@ -1,9 +1,8 @@
 import React from 'react'
-import './styles.css'
 
 const Register = () => {
     return (
-        <div className="container__register">
+        <div className="container">
             <section className="form signup">
                 <header>Chat app online</header>
                 <form action="#">
@@ -27,6 +26,7 @@ const Register = () => {
                         <div className="field input">
                             <label>Contraseña</label>
                             <input type="password" placeholder="Contraseña" />
+                            <i className="fas fa-eye"></i>
                         </div>
 
                         <div className="field image">
