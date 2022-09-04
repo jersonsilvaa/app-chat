@@ -1,12 +1,15 @@
 import React from 'react'
+import useShowAndHide from '../hooks/useShowAndHide'
 
 const Login = () => {
+
+    const { show, toggleBtn, FaEye, FaEyeSlash } = useShowAndHide()
     return (
         <div className="container">
         <section className="form login">
-            <header>Chat app online</header>
+            <header>App chatline</header>
             <form action="#">
-                <div className="error-text">Mensaje de error</div>
+                <div className="error-txt"></div>
                 <div className="name-details">
                 <div className="field input">
                     <label>Correo</label>
@@ -14,11 +17,15 @@ const Login = () => {
                 </div>
                 <div className="field input">
                     <label>Contraseña</label>
-                    <input type="password" placeholder="Contraseña" />
-                    <i className="fas fa-eye"></i>
+                    <input id="pwd" type={show ? "text" : "password"} placeholder="Contraseña" />
+                    <i onClick={toggleBtn} className="fas fa-eye">
+                        {
+                            show ? <FaEyeSlash /> : <FaEye />
+                        }
+                    </i>
                 </div>
                 <div className="field button">
-                    <input type="submit" value="Continuar" />
+                    <input className="button" type="submit" value="Continuar" />
                 </div>
             </div>
             </form>
