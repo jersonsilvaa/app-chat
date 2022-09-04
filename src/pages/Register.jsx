@@ -8,7 +8,7 @@ const Register = () => {
             <section className="form signup">
                 <header>Chat app online</header>
                 <form action="#">
-                    <div className="error-text">Mensaje de error</div>
+                    <div className="error-txt"></div>
                     <div className="name-details">
                         <div className="field input">
                             <label>Nombres</label>
