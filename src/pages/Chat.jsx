@@ -1,11 +1,12 @@
 import React from 'react';
+import { FaTelegramPlane, FaArrowLeft } from 'react-icons/fa'
 
 const Chat = () => {
     return(
         <div className="container">
         <section className="chat-area">
             <header>
-                <a href="#" className="back-icon"><i className="fas fa-arrow-left"></i></a>
+                <a href="#" className="back-icon"><FaArrowLeft/></a>
                     <img src="https://pps.whatsapp.net/v/t61.24694-24/291483763_3316118818675085_5448892912731441282_n.jpg?ccb=11-4&oh=01_AVzPVDkCPrIQEg2Lx4kQCaGMIMW8mdwjn3WSY6dZa3Wv8g&oe=6325E605" />
                     <div className="details">
                         <span>DevSilva</span>
@@ -60,7 +61,7 @@ const Chat = () => {
             </div>
             <form action="#" className="typing-area">
                 <input type="text" placeholder="Escribe un mensaje aquí" />
-                <button><i className="fa-solid fa-paper-plane"></i></button>
+                <button><i className='send'><FaTelegramPlane /></i></button>
             </form>
         </section>
     </div>
